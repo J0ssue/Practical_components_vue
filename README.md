@@ -1,5 +1,16 @@
 # vue_practical-components
 
+## To See Practical Components Live:
+1. git clone repo
+2. npm install
+3. npm run serve
+
+## To See Components Code:
+1. cd into dir
+2. cd into src
+3. cd into components
+
+
 ## Project setup
 ```
 npm install
