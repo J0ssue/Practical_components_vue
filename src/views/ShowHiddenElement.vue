@@ -13,8 +13,8 @@
 
 	.dynamic-button {
 		background-color: teal;
-		position: absolute;
-		right: 10px;
+		position: fixed;
+		right: 20px;
 		bottom: 10px;
 		border-radius: 50%;
 		color: white;
@@ -22,18 +22,21 @@
 		height: 80px;
 		font-size: 50px;
 		line-height: 8px;
-		// &:hover {
-		// 	bg
-		// }
+		&:hover {
+			cursor: pointer;
+			background: rgba(0, 0, 0, 0.8);
+		}
 	}
 </style>
 <template>
 	<div>
 		<h1>Conditional Visibility</h1>
 		<div class="main">
-			<a href="#">New Post</a>
+			<a href="#" id="new-post-link">New Post</a>
 		</div>
-		<button class="dynamic-button">+</button>
+		<visible when-hidden="#new-post-link">
+			<button class="dynamic-button">+</button>
+		</visible>
 	</div>
 </template>
 
