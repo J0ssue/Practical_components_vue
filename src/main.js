@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Modal from './plugins/ModalPlugin.js';
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -8,7 +9,9 @@ import Dropdown from './components/Dropdown.vue';
 import Visible from './components/Visible.vue';
 
 Vue.config.productionTip = false
-  // import reusable components:
+Vue.use(Modal);
+
+// import reusable components:
 Vue.component('scroll-link', ScrollLink);
 Vue.component('dropdown', Dropdown);
 Vue.component('visible', Visible);
@@ -17,4 +20,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

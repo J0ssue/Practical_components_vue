@@ -35,6 +35,12 @@ export default new Router({
       name: 'show-hidden-el',
       component: () =>
         import ( /* webpackChunkName: "about" */ './views/ShowHiddenElement.vue')
+    },
+    {
+      path: '/modal',
+      name: 'modal',
+      component: () =>
+        import ( /* webpackChunkName: "about" */ './views/Modal_Container.vue')
     }
   ]
 })
