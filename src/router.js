@@ -7,8 +7,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
@@ -16,10 +15,26 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () =>
+        import ( /* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+      path: '/smooth-scroll',
+      name: 'smooth-scroll',
+      component: () =>
+        import ( /* webpackChunkName: "about" */ './views/SmoothScroll.vue')
+    },
+    {
+      path: '/context-menu',
+      name: 'context-menu',
+      component: () =>
+        import ( /* webpackChunkName: "about" */ './views/ContextMenu.vue')
+    },
+    {
+      path: '/show-hidden-el',
+      name: 'show-hidden-el',
+      component: () =>
+        import ( /* webpackChunkName: "about" */ './views/ShowHiddenElement.vue')
     }
   ]
 })
