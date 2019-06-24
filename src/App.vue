@@ -30,7 +30,10 @@
 				>Show Hidden Element</router-link
 			>
 			|
-			<router-link :to="{ name: 'modal' }">modal</router-link>
+			<router-link :to="{ name: 'modal' }">modal</router-link> |
+			<router-link :to="{ name: 'confirmation-button' }"
+				>Confirmation Dialogs</router-link
+			>
 		</div>
 		<router-view />
 	</div>

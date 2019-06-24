@@ -41,6 +41,12 @@ export default new Router({
       name: 'modal',
       component: () =>
         import ( /* webpackChunkName: "about" */ './views/Modal_Container.vue')
+    },
+    {
+      path: '/confirmation-button',
+      name: 'confirmation-button',
+      component: () =>
+        import ( /* webpackChunkName: "about" */ './views/ConfirmationButton.vue')
     }
   ]
 })

@@ -15,11 +15,12 @@
 				eveniet magnam repudiandae!
 			</p>
 			<template v-slot:footer="{ foo }">
-				<a
-					href="#"
+				<button
+					@click="$modal.hide('cancel')"
 					class="bg-red-500 py-2 px-4 rounded-full text-white hover:bg-red-600 mr-3"
-					>Cancel</a
 				>
+					Cancel
+				</button>
 				<a
 					href="#confirm-cancel-modal"
 					class="bg-green-500 py-2 px-4 rounded-full text-white hover:bg-green-600 "
@@ -37,11 +38,12 @@
 				eveniet magnam repudiandae!
 			</p>
 			<template v-slot:footer="{ foo }">
-				<a
-					href="#"
+				<button
 					class="bg-red-500 py-2 px-4 rounded-full text-white hover:bg-red-600 mr-3"
-					>Cancel</a
+					@click="$modal.hide('cancel')"
 				>
+					Cancel
+				</button>
 				<a
 					href="#"
 					class="bg-green-500 py-2 px-4 rounded-full text-white hover:bg-green-600 "
